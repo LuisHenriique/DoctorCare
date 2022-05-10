@@ -2,7 +2,9 @@
   font-size: 62.5%; /* 1 rem = 10px*/
   --primary-color: #00856f;
   --headline: #212529;
+  --brand-beige: #fffaf1;
   --paragraph: #495057;
+  --background: #dce9e2;
 }
 
 @font-face {
@@ -20,7 +22,7 @@ body {
   font-size: 1.6rem;
 }
 .container {
-  background-color: #dce9e2;
+  background-color: var(--background);
   margin-top: 4.1rem;
   margin-left: auto;
   margin-right: auto;
@@ -72,31 +74,40 @@ button {
   text-transform: uppercase;
 }
 
-.imgCapa {
-}
-.infoDoctor {
-  box-sizing: border-box;
+.stats {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #ffffff;
+  gap: 6rem;
+
+  background-color: var(--brand-beige);
   border: 1px solid #dce9e2;
   border-radius: 0.6rem;
-  padding: 4rem;
-  padding-bottom: 4rem;
-  padding-top: 4rem;
-  height: 47rem;
+
   width: 32.7rem;
+  padding-block: 4rem;
+  margin-inline: auto;
 }
-.description > h4 {
+.stat > h3 {
   font-size: 4.8rem;
   line-height: 130%;
   color: #212529;
 }
+.stat {
+  margin: 0;
+  padding: 0;
+}
 
-.description p {
+.stat p {
+  margin: 0;
   color: var(--primary-color);
   line-height: 150%;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
+}
+
+.imgCapa {
+  margin-inline: auto;
+  display: block;
+  object-position: 0 2rem;
 }
