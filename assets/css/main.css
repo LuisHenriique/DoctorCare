@@ -197,7 +197,6 @@ body.menu-expanded .menu {
   background-color: var(--primary-color);
   width: 100vw;
   height: 100vh;
-  transition: all 0.5s;
 
   padding-top: var(--nav-height);
 }
