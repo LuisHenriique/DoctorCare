@@ -1,4 +1,3 @@
-const body = document.querySelector('body')
 const nav = document.querySelector('#navagation')
 const openMenu = document.querySelector('.openMenu')
 const closeMenu = document.querySelector('.closeMenu')
@@ -9,9 +8,9 @@ document.addEventListener('scroll', function onScroll() {
 })
 
 openMenu.addEventListener('click', function (e) {
-  body.classList.add('menu-expanded')
+  document.body.classList.add('menu-expanded')
 })
 
 closeMenu.addEventListener('click', function (e) {
-  body.classList.remove('menu-expanded')
+  document.body.classList.remove('menu-expanded')
 })
