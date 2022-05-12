@@ -27,6 +27,7 @@ body {
   text-align: center;
   font-family: 'DM Sans', sans-serif;
   font-size: 1.6rem;
+  overflow: overlay;
 }
 
 ul {
@@ -159,13 +160,22 @@ nav.scroll svg:nth-child(1) path {
   fill: white;
 }
 
-nav.scroll svg:nth-child(2) path {
+nav.scroll button path {
   stroke: white;
 }
 
+nav button {
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
 /* ======= MEUNU-EXPANDED ======= */
 body.menu-expanded {
   overflow: hidden;
+}
+
+body.menu-expanded > :not(nav) {
+  display: none;
 }
 .menu,
 .closeMenu,
@@ -179,6 +189,7 @@ body.menu-expanded .closeMenu {
   opacity: 1;
   visibility: visible;
 }
+
 body.menu-expanded .menu {
   position: fixed;
   left: 0;
@@ -186,6 +197,7 @@ body.menu-expanded .menu {
   background-color: var(--primary-color);
   width: 100vw;
   height: 100vh;
+  transition: all 0.5s;
 
   padding-top: var(--nav-height);
 }
@@ -230,7 +242,7 @@ body.menu-expanded nav {
   gap: 3.2rem;
 }
 body.menu-expanded .logo,
-body.menu-expanded nav button {
+body.menu-expanded button {
   position: relative;
   z-index: 100;
 }
@@ -239,6 +251,6 @@ body.menu-expanded .logo path {
   fill: white;
 }
 
-body.menu-expanded nav button path {
+body.menu-expanded button path {
   stroke: white;
 }

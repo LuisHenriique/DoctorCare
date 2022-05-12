@@ -7,7 +7,7 @@
     <title>DoctorCare</title>
     <link rel="stylesheet" href="./assets/css/main.css" />
   </head>
-  <body class="menu-expanded">
+  <body >
 
   <nav id="navagation">
 
@@ -42,7 +42,10 @@
         </ul>
       </div>
 
-      <button class="openMenu">
+      <button
+      aria-expanded="false"
+        aria-label="Abrir menu"
+      class="openMenu">
         <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M10 20H30" stroke="#00856F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           <path d="M10 12H30" stroke="#00856F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -50,7 +53,10 @@
           </svg>
       </button>
       
-      <button class="closeMenu">     
+      <button 
+      aria-expanded="true"
+        aria-label="Fechar menu"
+      class="closeMenu">     
         <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M30 10L10 30M10 10L30 30" stroke="#FFFAF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
