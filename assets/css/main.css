@@ -1,3 +1,5 @@
+/* =========GERAL========== */
+
 :root {
   font-size: 62.5%; /* 1 rem = 10px*/
   --primary-color: #00856f;
@@ -5,49 +7,56 @@
   --brand-beige: #fffaf1;
   --paragraph: #495057;
   --background: #dce9e2;
+  --nav-height: 7.2rem;
 }
 
-@font-face {
-  font-family: 'DM sans';
-  src: url('./assets/fonts/DM_Sans/DMSans-Regular.ttf');
-}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
 body {
   text-align: center;
   font-family: 'DM Sans', sans-serif;
   font-size: 1.6rem;
 }
-.container {
-  background-color: var(--background);
-  margin-top: 4.1rem;
-  margin-left: auto;
-  margin-right: auto;
+/*===== HEADER ====*/
+
+.wrapper {
+  margin-inline: auto;
   width: 37.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-right: 2rem;
-  padding-left: 2rem;
+  padding-inline: 2.4rem;
+}
+header {
+  margin-top: calc(4.1rem + var(--nav-height));
+}
+header::before {
+  content: '';
+  width: 100vw;
+  height: calc(108rem + var(--nav-height));
+  background-color: var(--background);
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
-.titleH4 {
+header h4 {
   font-size: 1.4rem;
   color: var(--primary-color);
   margin-bottom: 1.6rem;
 }
 
-h1 {
-  font: 31.4rem;
+header h1 {
+  font-size: 3.4rem;
   color: var(--headline);
   line-height: 130%;
   margin-bottom: 2.4rem;
 }
-p {
+header p {
   font-size: 1.8rem;
   line-height: 130%;
   font-weight: 400;
@@ -55,7 +64,7 @@ p {
   margin-bottom: 3.2rem;
 }
 
-button {
+header button {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -68,10 +77,17 @@ button {
   border: 0;
   margin-bottom: 6rem;
   padding: 16px 32px;
-  font-weight: bold;
+  font-weight: 700;
   color: #ffffff;
   background-color: var(--primary-color);
   text-transform: uppercase;
+  margin-inline: auto;
+}
+
+.imgCapa {
+  margin-inline: auto;
+  display: block;
+  object-position: 0 2rem;
 }
 
 .stats {
@@ -89,14 +105,14 @@ button {
   padding-block: 4rem;
   margin-inline: auto;
 }
-.stat > h3 {
-  font-size: 4.8rem;
-  line-height: 130%;
-  color: #212529;
-}
 .stat {
   margin: 0;
   padding: 0;
+}
+.stat h3 {
+  font-size: 4.8rem;
+  line-height: 130%;
+  color: #212529;
 }
 
 .stat p {
@@ -106,8 +122,30 @@ button {
   font-size: 1.6rem;
 }
 
-.imgCapa {
-  margin-inline: auto;
-  display: block;
-  object-position: 0 2rem;
+/* ======= NAV ======= */
+nav {
+  display: flex;
+  height: var(--nav-height);
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+nav .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav.scroll {
+  transition: ease-in-out 0.4s;
+  background-color: var(--primary-color);
+  width: 100vw;
+}
+
+nav.scroll svg:nth-child(1) path {
+  fill: white;
+}
+
+nav.scroll svg:nth-child(2) path {
+  stroke: white;
 }
