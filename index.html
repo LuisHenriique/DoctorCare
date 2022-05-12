@@ -7,9 +7,9 @@
     <title>DoctorCare</title>
     <link rel="stylesheet" href="./assets/css/main.css" />
   </head>
-  <body onscroll="onScroll()">
+  <body class="menu-expanded">
 
-  <nav>
+  <nav id="navagation">
 
     <div class="wrapper">  <a href="#" class="logo">
       <svg width="133" height="18" viewBox="0 0 133 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -26,11 +26,35 @@
       </svg>
       </a>
 
-      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M10 20H30" stroke="#00856F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M10 12H30" stroke="#00856F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M18 28L30 28" stroke="#00856F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+      <div class="menu">
+        <ul>
+          <li><a href="#">Serviços</a></li>
+          <li><a href="#">Serviços</a></li>
+          <li><a href="#">Sobre</a></li>
+
+        </ul>
+        <a class ="button" href="#">Agende sua consulta</a href="#">
+        <ul class="socialLinks">
+          <li><a target="_blank" href="#"><img src="./assets/images/insta.svg" alt="icone instagram"></a></li>
+          <li><a target="_blank" href="#"><img src="./assets/images/face.svg" alt="icone facebook"></a></li>
+          <li><a target="_blank" href="#"><img src="./assets/images/you.svg" alt="icone youtube"></a></li>
+        </ul>
+      </div>
+
+      <button class="openMenu">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10 20H30" stroke="#00856F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M10 12H30" stroke="#00856F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M18 28L30 28" stroke="#00856F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+      </button>
+      
+      <button class="closeMenu">     
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M30 10L10 30M10 10L30 30" stroke="#FFFAF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
+        </button>
         </div>
   
   </nav>

@@ -1,11 +1,6 @@
-const nav = document.querySelector('nav')
-function onScroll() {
-  const positionY = scrollY
-  if (positionY !== 0) {
-    nav.classList.add('scroll')
-  } else {
-    nav.classList.remove('scroll')
-  }
-}
+const nav = document.querySelector('#navagation')
 
-document.addEventListener('scroll', onScroll())
+document.addEventListener('scroll', function onScroll() {
+  const positionY = scrollY
+  positionY !== 0 ? nav.classList.add('scroll') : nav.classList.remove('scroll')
+})
