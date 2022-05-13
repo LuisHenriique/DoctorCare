@@ -14,3 +14,19 @@ openMenu.addEventListener('click', function (e) {
 closeMenu.addEventListener('click', function (e) {
   document.body.classList.remove('menu-expanded')
 })
+
+document.addEventListener('click', function (e) {
+  const el = e.target
+
+  if (el.classList.contains('services')) {
+    document.body.classList.remove('menu-expanded')
+  }
+
+  if (el.classList.contains('home')) {
+    document.body.classList.remove('menu-expanded')
+  }
+
+  if (el.classList.contains('about')) {
+    document.body.classList.remove('menu-expanded')
+  }
+})
