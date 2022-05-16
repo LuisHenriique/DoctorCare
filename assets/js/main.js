@@ -31,3 +31,10 @@ document.addEventListener('click', function (e) {
     body.classList.remove('menu-expanded')
   }
 })
+
+//ScrollReaveal
+
+ScrollReveal({
+  origin: 'top',
+  distance: '30px'
+}).reveal('#home')
