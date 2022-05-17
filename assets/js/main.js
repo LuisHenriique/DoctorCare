@@ -23,7 +23,7 @@ document.addEventListener('click', function (e) {
     body.classList.remove('menu-expanded')
   }
 
-  if (el.classList.contains('home')) {
+  if (el.classList.contains('homeDoctor')) {
     body.classList.remove('menu-expanded')
   }
 
@@ -36,5 +36,13 @@ document.addEventListener('click', function (e) {
 
 ScrollReveal({
   origin: 'top',
-  distance: '30px'
-}).reveal('#home')
+  distance: '30px',
+  duration: 700
+}).reveal(`
+#home,
+#home img, 
+#home .stats, 
+#services, 
+#services header,
+#services .card
+`)

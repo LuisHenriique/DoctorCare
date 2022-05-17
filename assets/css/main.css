@@ -46,6 +46,127 @@ a {
 section {
   padding-block: 10rem;
 }
+
+/* ======= NAV ======= */
+nav {
+  display: flex;
+  height: var(--nav-height);
+
+  position: fixed;
+  top: 0;
+  width: 100vw;
+
+  z-index: 100;
+}
+nav .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav.scroll {
+  background-color: var(--primary-color);
+}
+
+nav.scroll .logo path {
+  fill: white;
+}
+
+nav.scroll button path {
+  stroke: white;
+}
+
+nav button {
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+/* ======= MENU-EXPANDED ======= */
+body.menu-expanded {
+  overflow: hidden;
+}
+
+body.menu-expanded > :not(nav) {
+  visibility: hidden;
+}
+.menu,
+.closeMenu,
+body.menu-expanded .openMenu {
+  opacity: 0;
+  visibility: hidden;
+}
+
+body.menu-expanded .menu,
+body.menu-expanded .closeMenu {
+  opacity: 1;
+  visibility: visible;
+}
+.menu {
+  transform: translateY(100%);
+}
+body.menu-expanded .menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: var(--primary-color);
+  width: 100vw;
+  height: 100vh;
+
+  padding-top: var(--nav-height);
+
+  transition: transform 400ms;
+  transform: translateY(0);
+}
+
+.menu ul:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4.8rem;
+
+  margin-top: 6rem;
+
+  font-size: 2.4rem;
+  line-height: 3.1rem;
+  font-weight: bold;
+}
+.menu .button {
+  padding: 1.6rem 3.2rem;
+  background-color: #ffffff;
+  border-radius: 4rem;
+  color: var(--primary-color);
+  line-height: 2.3rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  display: inline-block;
+  margin-top: 4.8rem;
+  margin-bottom: 8rem;
+}
+.menu ul li a {
+  color: #ffffff;
+}
+.socialLinks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3.2rem;
+}
+body.menu-expanded .logo,
+body.menu-expanded button {
+  position: relative;
+  z-index: 100;
+}
+
+body.menu-expanded .logo path {
+  fill: white;
+}
+
+body.menu-expanded button path {
+  stroke: white;
+}
+
 /*===== HOME ====*/
 
 .wrapper {
@@ -146,129 +267,6 @@ section {
   font-size: 1.6rem;
 }
 
-/* ======= NAV ======= */
-nav {
-  display: flex;
-  height: var(--nav-height);
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
-nav .wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-nav.scroll {
-  transition: all 0.5s;
-  background-color: var(--primary-color);
-  width: 100vw;
-}
-
-nav.scroll svg:nth-child(1) path {
-  fill: white;
-}
-
-nav.scroll button path {
-  stroke: white;
-}
-
-nav button {
-  background: none;
-  border: 0;
-  cursor: pointer;
-}
-/* ======= MENU-EXPANDED ======= */
-body.menu-expanded {
-  overflow: hidden;
-}
-
-body.menu-expanded > :not(nav) {
-  display: none;
-}
-.menu,
-.closeMenu,
-body.menu-expanded .openMenu {
-  opacity: 0;
-  visibility: hidden;
-}
-
-body.menu-expanded .menu,
-body.menu-expanded .closeMenu {
-  opacity: 1;
-  visibility: visible;
-}
-.menu {
-  transform: translateY(100%);
-}
-body.menu-expanded .menu {
-  position: fixed;
-  left: 0;
-  top: 0;
-  background-color: var(--primary-color);
-  width: 100vw;
-  height: 100vh;
-
-  padding-top: var(--nav-height);
-
-  transition: transform 400ms;
-  transform: translateY(0);
-}
-
-body.menu-expanded nav {
-  position: relative;
-}
-
-.menu ul:nth-child(1) {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 4.8rem;
-
-  margin-top: 6rem;
-
-  font-size: 2.4rem;
-  line-height: 3.1rem;
-  font-weight: bold;
-}
-.menu .button {
-  padding: 1.6rem 3.2rem;
-  background-color: #ffffff;
-  border-radius: 4rem;
-  color: var(--primary-color);
-  line-height: 2.3rem;
-  font-size: 1.8rem;
-  font-weight: bold;
-  text-transform: uppercase;
-
-  display: inline-block;
-  margin-top: 4.8rem;
-  margin-bottom: 8rem;
-}
-.menu ul li a {
-  color: #ffffff;
-}
-.socialLinks {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 3.2rem;
-}
-body.menu-expanded .logo,
-body.menu-expanded button {
-  position: relative;
-  z-index: 100;
-}
-
-body.menu-expanded .logo path {
-  fill: white;
-}
-
-body.menu-expanded button path {
-  stroke: white;
-}
-
 /* ======= SERVICES ======= */
 
 #services header h4 {
@@ -315,3 +313,5 @@ body.menu-expanded button path {
   font-size: 1.6rem;
   line-height: 150%;
 }
+
+/* ======= ABOUT ======= */
