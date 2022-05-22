@@ -9,6 +9,13 @@ document.addEventListener('scroll', function showNavOnScroll() {
   positionY !== 0 ? nav.classList.add('scroll') : nav.classList.remove('scroll')
 })
 
+document.addEventListener('scroll', function showBackToTopButton() {
+  const positionY = scrollY
+  positionY > 500
+    ? BackToTopButton.classList.remove('show')
+    : BackToTopButton.classList.add('show')
+})
+
 openMenu.addEventListener('click', function (e) {
   body.classList.add('menu-expanded')
 })

@@ -406,12 +406,9 @@ footer .socialLinks {
   position: fixed;
   bottom: 1rem;
   right: 2.5rem;
-
-  opacity: 0;
-  visibility: hidden;
 }
 
-#BackToTopButton .show {
-  opacity: 1;
-  visibility: visible;
+.show {
+  opacity: 0;
+  visibility: hidden;
 }
