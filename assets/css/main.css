@@ -204,6 +204,13 @@ body.menu-expanded .menu {
   display: inline-block;
   margin-top: 4.8rem;
 }
+
+.menu .button:hover {
+  background-color: var(--primary-color);
+  color: white;
+  filter: brightness(1.2);
+  transition: 300ms;
+}
 .menu ul li a {
   color: #ffffff;
 }
@@ -347,8 +354,6 @@ body.menu-expanded button path {
   margin-top: 2.4rem;
   margin-bottom: 6rem;
 }
-#about img {
-}
 
 /* ======= Contact ======= */
 
@@ -368,7 +373,7 @@ body.menu-expanded button path {
 #contact ul li {
   display: flex;
   align-items: center;
-  gap: 0.08rem;
+  gap: 0.8rem;
 }
 
 /* ======= FOOTER ======= */
@@ -404,11 +409,17 @@ footer .socialLinks {
 /*==========  BackToTopButton ======s */
 #BackToTopButton {
   position: fixed;
-  bottom: 1rem;
+  bottom: 5rem;
   right: 2.5rem;
-}
 
-.show {
+  transition: all 500ms;
+
   opacity: 0;
   visibility: hidden;
+  transform: translateY(100%);
+}
+
+#BackToTopButton.show {
+  opacity: 1;
+  visibility: visible;
 }

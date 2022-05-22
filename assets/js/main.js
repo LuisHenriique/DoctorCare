@@ -4,17 +4,19 @@ const openMenu = document.querySelector('.openMenu')
 const closeMenu = document.querySelector('.closeMenu')
 const BackToTopButton = document.querySelector('#BackToTopButton')
 
-document.addEventListener('scroll', function showNavOnScroll() {
+function showNavOnScroll() {
   const positionY = scrollY
   positionY !== 0 ? nav.classList.add('scroll') : nav.classList.remove('scroll')
-})
-
-document.addEventListener('scroll', function showBackToTopButton() {
+}
+function showBackToTopButton() {
   const positionY = scrollY
   positionY > 500
-    ? BackToTopButton.classList.remove('show')
-    : BackToTopButton.classList.add('show')
-})
+    ? BackToTopButton.classList.add('show')
+    : BackToTopButton.classList.remove('show')
+}
+
+document.addEventListener('scroll', showNavOnScroll)
+document.addEventListener('scroll', showBackToTopButton)
 
 openMenu.addEventListener('click', function (e) {
   body.classList.add('menu-expanded')
@@ -65,5 +67,4 @@ ScrollReveal({
 #contact .content,
 footer,
 footer p,
-footer .socialLinks
-`)
+footer .socialLinks`)
