@@ -8,7 +8,7 @@
 <br>
 
 <p align="center">
-  <img alt="DoctorCare" src="./assets/images/capa.svg" width="100%">
+  <img alt="DoctorCare" src="./assets/images/Capa.png" width="100%">
 </p>
 
 ## 🚀 Tecnologias
