@@ -2,8 +2,9 @@ const body = document.querySelector('body')
 const nav = document.querySelector('#navagation')
 const openMenu = document.querySelector('.openMenu')
 const closeMenu = document.querySelector('.closeMenu')
+const BackToTopButton = document.querySelector('#BackToTopButton')
 
-document.addEventListener('scroll', function onScroll() {
+document.addEventListener('scroll', function showNavOnScroll() {
   const positionY = scrollY
   positionY !== 0 ? nav.classList.add('scroll') : nav.classList.remove('scroll')
 })
@@ -30,6 +31,10 @@ document.addEventListener('click', function (e) {
   if (el.classList.contains('about')) {
     body.classList.remove('menu-expanded')
   }
+
+  if (el.classList.contains('button')) {
+    body.classList.remove('menu-expanded')
+  }
 })
 
 //ScrollReaveal
@@ -44,5 +49,14 @@ ScrollReveal({
 #home .stats, 
 #services, 
 #services header,
-#services .card
+#services .card,
+#about,
+#about header,
+#about .content,
+#contact,
+#contact header,
+#contact .content,
+footer,
+footer p,
+footer .socialLinks
 `)

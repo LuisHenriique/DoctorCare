@@ -9,6 +9,7 @@
   --background: #dce9e2;
   --nav-height: 7.2rem;
   --bg-light: #f7f9f9;
+  --brand-green-hover: #00453a;
 }
 
 * {
@@ -77,7 +78,32 @@ section .content p {
   font-weight: 400;
   line-height: 150%;
 }
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 
+  padding: 1.6rem 3.2rem;
+  width: fit-content;
+
+  border-radius: 4rem;
+  border: 0;
+
+  margin-bottom: 6rem;
+
+  background-color: var(--primary-color);
+
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+}
+.button:hover {
+  background: var(--brand-green-hover);
+}
 img {
   max-width: 100%;
 }
@@ -177,7 +203,6 @@ body.menu-expanded .menu {
 
   display: inline-block;
   margin-top: 4.8rem;
-  margin-bottom: 8rem;
 }
 .menu ul li a {
   color: #ffffff;
@@ -231,24 +256,7 @@ body.menu-expanded button path {
   color: var(--paragraph);
   margin-bottom: 3.2rem;
 }
-
-#home button {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  width: 26.3rem;
-  height: 5.2rem;
-  line-height: 1.8rem;
-  border-radius: 4rem;
-  border: 0;
-  margin-bottom: 6rem;
-  padding: 16px 32px;
-  font-weight: 700;
-  color: #ffffff;
-  background-color: var(--primary-color);
-  text-transform: uppercase;
+#home .button {
   margin-inline: auto;
 }
 
@@ -336,6 +344,74 @@ body.menu-expanded button path {
 }
 
 #about .content p {
-  margin-bottom: 6rem;
   margin-top: 2.4rem;
+  margin-bottom: 6rem;
+}
+#about img {
+}
+
+/* ======= Contact ======= */
+
+#contact {
+  text-align: left;
+}
+#contact header {
+  margin-bottom: 3.2rem;
+}
+#contact ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  margin-bottom: 3.2rem;
+}
+
+#contact ul li {
+  display: flex;
+  align-items: center;
+  gap: 0.08rem;
+}
+
+/* ======= FOOTER ======= */
+
+footer {
+  background-color: var(--primary-color);
+  padding-block: 6rem;
+
+  text-align: left;
+  color: white;
+}
+footer .logo {
+  display: inline-block;
+  margin-bottom: 2.4rem;
+}
+footer .logo svg {
+  width: 23.6rem;
+  height: 3.1rem;
+}
+footer .logo path {
+  fill: white;
+}
+footer p {
+  color: var(--brand-beige);
+  line-height: 3.1rem;
+  margin-bottom: 3.2rem;
+}
+
+footer .socialLinks {
+  justify-content: left;
+}
+
+/*==========  BackToTopButton ======s */
+#BackToTopButton {
+  position: fixed;
+  bottom: 1rem;
+  right: 2.5rem;
+
+  opacity: 0;
+  visibility: hidden;
+}
+
+#BackToTopButton .show {
+  opacity: 1;
+  visibility: visible;
 }
