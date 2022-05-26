@@ -164,6 +164,7 @@ body.menu-expanded .closeMenu {
 }
 .menu {
   transform: translateY(100%);
+  position: fixed;
 }
 body.menu-expanded .menu {
   position: fixed;
@@ -238,7 +239,7 @@ body.menu-expanded button path {
 
 .wrapper {
   margin-inline: auto;
-  width: 37.5rem;
+  width: min(50rem, 100%);
   padding-inline: 2.4rem;
 }
 #home {
@@ -284,7 +285,7 @@ body.menu-expanded button path {
   border: 1px solid #dce9e2;
   border-radius: 0.6rem;
 
-  width: 32.7rem;
+  width: 100%;
   padding-block: 4rem;
   margin-inline: auto;
 }
