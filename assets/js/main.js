@@ -1,5 +1,5 @@
 const body = document.querySelector('body')
-const nav = document.querySelector('#navagation')
+const nav = document.querySelector('#navigation')
 const openMenu = document.querySelector('.openMenu')
 const closeMenu = document.querySelector('.closeMenu')
 const BackToTopButton = document.querySelector('#BackToTopButton')

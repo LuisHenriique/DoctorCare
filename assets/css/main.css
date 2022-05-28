@@ -142,6 +142,11 @@ nav button {
   cursor: pointer;
 }
 
+nav .menu,
+nav .closeMenu {
+  position: fixed;
+}
+
 /* ======= MENU-EXPANDED ======= */
 body.menu-expanded {
   overflow: hidden;
@@ -164,10 +169,8 @@ body.menu-expanded .closeMenu {
 }
 .menu {
   transform: translateY(100%);
-  position: fixed;
 }
 body.menu-expanded .menu {
-  position: fixed;
   left: 0;
   top: 0;
   background-color: var(--primary-color);
@@ -243,12 +246,13 @@ body.menu-expanded button path {
   padding-inline: 2.4rem;
 }
 #home {
+  padding-block: 0;
   padding-top: calc(4.1rem + var(--nav-height));
 }
 #home::before {
   content: '';
   width: 100%;
-  height: calc(108rem + var(--nav-height));
+  height: calc(81% + var(--nav-height));
   background-color: var(--background);
   display: block;
   position: absolute;
