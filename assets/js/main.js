@@ -4,6 +4,39 @@ const openMenu = document.querySelector('.openMenu')
 const closeMenu = document.querySelector('.closeMenu')
 const BackToTopButton = document.querySelector('#BackToTopButton')
 
+function onScrollAll() {
+  activateMenuCurrentSection(home)
+  showBackToTopButton()
+  showNavOnScroll()
+}
+
+function activateMenuCurrentSection(section) {
+  const targetLine = scrollY + innerHeight / 2
+
+  const sectionTop = section.offsetTop
+  const sectionHeight = section.offsetHeight
+
+  const sectionTopReachOrPassedTargetLine = targetLine >= sectionTop
+
+  console.log('topp', sectionTopReachOrPassedTargetLine)
+
+  const sectionEndsAt = sectionTop + sectionHeight
+
+  const sectionEndPassedTArgetLine = sectionEndsAt <= targetLine
+  console.log('Passou', sectionEndPassedTArgetLine)
+
+  // limites seções
+
+  const sectionBoundaries =
+    sectionTopReachOrPassedTargetLine && !sectionEndPassedTArgetLine
+
+  console.log(sectionBoundaries)
+
+  if (sectionBoundaries) {
+    console.log('Estou na seção HOME')
+  }
+}
+
 function showNavOnScroll() {
   const positionY = scrollY
   positionY !== 0 ? nav.classList.add('scroll') : nav.classList.remove('scroll')
@@ -15,8 +48,7 @@ function showBackToTopButton() {
     : BackToTopButton.classList.remove('show')
 }
 
-document.addEventListener('scroll', showNavOnScroll)
-document.addEventListener('scroll', showBackToTopButton)
+document.addEventListener('scroll', onScrollAll)
 
 openMenu.addEventListener('click', function (e) {
   body.classList.add('menu-expanded')
