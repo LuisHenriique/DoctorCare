@@ -6,6 +6,9 @@ const BackToTopButton = document.querySelector('#BackToTopButton')
 
 function onScrollAll() {
   activateMenuCurrentSection(home)
+  activateMenuCurrentSection(services)
+  activateMenuCurrentSection(about)
+  activateMenuCurrentSection(contact)
   showBackToTopButton()
   showNavOnScroll()
 }
@@ -13,27 +16,29 @@ function onScrollAll() {
 function activateMenuCurrentSection(section) {
   const targetLine = scrollY + innerHeight / 2
 
+  // verificar de passou da secão
   const sectionTop = section.offsetTop
   const sectionHeight = section.offsetHeight
-
   const sectionTopReachOrPassedTargetLine = targetLine >= sectionTop
 
-  console.log('topp', sectionTopReachOrPassedTargetLine)
-
+  // onde a seção termina?
   const sectionEndsAt = sectionTop + sectionHeight
 
-  const sectionEndPassedTArgetLine = sectionEndsAt <= targetLine
-  console.log('Passou', sectionEndPassedTArgetLine)
+  // O final da seção passou da linha alvo
+  const sectionEndPassedTargetLine = sectionEndsAt <= targetLine
 
   // limites seções
-
   const sectionBoundaries =
-    sectionTopReachOrPassedTargetLine && !sectionEndPassedTArgetLine
+    sectionTopReachOrPassedTargetLine && !sectionEndPassedTargetLine
 
-  console.log(sectionBoundaries)
+  const sectionId = section.getAttribute('id')
+  const menuElement = document.querySelector(`.menu a[href*=${sectionId}]`)
 
+  menuElement.classList.remove('active')
   if (sectionBoundaries) {
     console.log('Estou na seção HOME')
+    menuElement.classList.add('active')
+  } else {
   }
 }
 
