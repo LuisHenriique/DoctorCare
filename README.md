@@ -28,4 +28,4 @@ DoctorCare é uma página institucional no formato One Page, responsiva, para us
 
 Você pode visualizar o layout do projeto através [desse link](https://www.figma.com/community/file/1102912263666619803). É necessário ter conta no [Figma](https://figma.com) para acessá-lo.
 
-<p>By Luis Henrique❤️❤️</p>
+<p>By Luis Henrique❤️❤️❤️❤️</p>
